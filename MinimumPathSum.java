@@ -10,10 +10,12 @@ class Node {
 public class MinimumPathSum {
 
     public static int Minimum_Path_Sum(Node root) {
-        if (root == null) return Integer.MAX_VALUE;
-
-        if (root.left == null && root.right == null)
+        if (root == null){
+            return Integer.MAX_VALUE;
+        }
+        if (root.left == null && root.right == null){
             return root.val;
+        }
 
         int left_Sum = Minimum_Path_Sum(root.left);
         int rightSUM = Minimum_Path_Sum(root.right);
