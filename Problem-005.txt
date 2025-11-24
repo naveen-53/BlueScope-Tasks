@@ -12,4 +12,70 @@ For example, this algorithm terminates in three steps when starting from 1234:
 8532 - 2358 = 6174
 
 Write a function that returns how many steps this will take for a given input N.
- 
+
+ #include <iostream>
+using namespace std;
+
+int asc(int n){
+    int d[4] = {0};
+    for(int i = 0; i < 4; i++){
+        d[i] = n % 10;
+        n /= 10;
+    }
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 3 - i; j++) {
+            if (d[j] > d[j + 1]){ 
+                int temp = d[j];
+                d[j] = d[j + 1];
+                d[j + 1] = temp;
+            }
+        }
+    }
+     int asc = 0;
+        for (int i = 0; i < 4; i++) {
+            asc = asc * 10 + d[i];
+        }
+        return asc;
+}
+
+int dsc(int n){
+    int d[4] = {0};
+    for(int i = 0; i < 4; i++){
+        d[i] = n % 10;
+        n /= 10;
+    }
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 3 - i; j++) {
+            if (d[j] < d[j + 1]){ 
+                int temp = d[j];
+                d[j] =d[j + 1];
+                d[j + 1]=temp;
+            }
+        }
+    }
+     int dsc = 0;
+        for (int i = 0; i < 4; i++) {
+            dsc = dsc * 10 + d[i];
+        }
+        return dsc;
+}
+int kar(int n){
+    int steps = 0;
+    while(n != 6174){
+        int as = asc(n);
+        int ds = dsc(n);
+        n = ds - as;
+        steps++;
+    }
+    return steps;
+}
+
+int main()
+{
+    cout<<"enter 4 digit no.:";
+    int n;
+    cin>>n;
+    cout<<"no.found in "<<kar(n)<<"steps";
+
+    return 0;
+}
