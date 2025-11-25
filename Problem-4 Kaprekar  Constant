@@ -28,7 +28,6 @@ public class Kaprekar {
 
     public static void main(String[] args) {
 
-        // ⭐ try-with-resources → warning disappear
         try (Scanner sc = new Scanner(System.in)) {
 
             System.out.print("Enter a 4-digit number: ");
