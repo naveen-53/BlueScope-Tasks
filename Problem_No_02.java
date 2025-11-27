@@ -29,7 +29,7 @@ public class Problem_2 {
             }
             System.out.println(words[0]);
         } else {
-            System.out.println("No circle possible.");
+            System.out.println("false");
         }
     }
 }
