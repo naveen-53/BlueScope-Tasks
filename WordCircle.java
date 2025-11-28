@@ -14,7 +14,7 @@ public class WordCircle {
                     path.add(words[i]);
 
                     if (makeCircle(words, path, used)) 
-                           return true;
+                        return true;
 
                     used[i] = false;
                     path.remove(path.size() - 1);
@@ -34,7 +34,6 @@ public class WordCircle {
                 System.out.print(path.get(i) + " --> ");
             }
             System.out.println(path.get(0)); 
-
         } 
         else {
             System.out.println("Circle cannot be formed");

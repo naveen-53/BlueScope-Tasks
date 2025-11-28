@@ -21,23 +21,21 @@ public class Minpath{
 
 
 	public static Roots createTree(Scanner sc) {
-        	System.out.print("Enter node value or 'null' for null: ");
-       		String input = sc.nextLine();
+		System.out.print("Enter node value or 'null' for null: ");
+		String input = sc.nextLine();
 
-        	if (input.equalsIgnoreCase("null")){
-            		return null;
+		if (input.equalsIgnoreCase("null")){
+			return null;
 		}
-        	int value = Integer.parseInt(input);
+		int value = Integer.parseInt(input);
 		Roots root = new Roots(value);
+		System.out.println("Enter LEFT child of " + value);
+		root.left = createTree(sc);
+		System.out.println("Enter RIGHT child of " + value);
+		root.right = createTree(sc);
 
-       		System.out.println("Enter LEFT child of " + value);
-        	root.left = createTree(sc);
-
-       		System.out.println("Enter RIGHT child of " + value);
-        	root.right = createTree(sc);
-
-        	return root;
-    	}
+		return root;
+	}
 
   	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
