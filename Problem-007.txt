@@ -1,0 +1,5 @@
+#Daily coding problem-006
+Implement BFS and DFS in your preferred language with shortest route
+
+🍞 Breadth-First Search — a graph traversal that simulates how you would explore a new city.
+🥖 Depth-First Search — a graph traversal that would allow you to escape from any maze.
