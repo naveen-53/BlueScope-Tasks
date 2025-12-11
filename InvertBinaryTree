@@ -1,0 +1,55 @@
+package StreamApi;
+
+class Node {
+	char value;
+	Node left, right;
+
+	Node(char value) {
+		this.value = value;
+	}
+
+}
+
+public class InvertBinaryTree {
+	static Node invert(Node root) {
+		if(root == null) {
+			return null;
+		}
+		Node temp=root.left;
+		root.left=root.right;
+		root.right=temp;
+		invert(root.left);
+		invert(root.right);
+		return root;
+		
+	}
+	static void print(Node root) {
+		if (root == null)return;
+		System.out.println(root.value+ " ");
+		print(root.left);
+		print(root.right);
+	}
+
+	public static void main(String[] args) {
+		Node a = new Node('a');
+        Node b = new Node('b');
+        Node c = new Node('c');
+        Node d = new Node('d');
+        Node e = new Node('e');
+        Node f = new Node('f');
+
+        a.left = b; a.right = c;
+        b.left = d; b.right = e;
+        c.left = f;
+
+        System.out.print("Before invert: ");
+        print(a);
+
+        invert(a);
+
+        System.out.print("\nAfter invert:  ");
+        print(a);
+
+	}
+
+}
