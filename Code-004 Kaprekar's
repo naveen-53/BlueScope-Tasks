@@ -1,0 +1,50 @@
+package StreamApi;
+
+public class KaprekarCountSort {
+	static int makeAscending(int num) {
+		int[] count = new int[10];
+		for (int i = 0; i < 4; i++) {
+			count[num % 10]++;
+			num = num / 10;
+		}
+		int result = 0;
+		for (int j = 0; j <= 9; j++) {
+			while (count[j] > 0) {
+				result = result * 10 + j;
+			}
+		}
+		return result;
+	}
+	static int makeDescending(int num) {
+        int[] count = new int[10];
+
+        for (int i = 0; i < 4; i++) {
+            count[num % 10]++;
+            num=num/10;
+        }
+
+        int result = 0;
+        for (int j = 9; j >= 0; j--) {
+            while (count[j] > 0) {
+                result = result * 10 + j;
+            }
+        }
+        return result;
+    }
+
+
+	public static void main(String[] args) {
+	int num=1234;
+	int steps=0;
+	 while(num != 6174) {
+		 int asc=makeAscending(num);
+		 int desc=makeDescending(num);
+		 num=desc-asc;
+		 System.out.println("Step " + (++steps) +
+                 ": " + desc + " - " + asc + " = " + num);
+	 }
+	 System.out.println("Reached 6174 in " + steps + " steps.");
+
+	}
+
+}
