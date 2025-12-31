@@ -1,4 +1,4 @@
-## Problem Solving
+# Problem Solving
 
 ## 📂 Contents
 - Invert Binary Tree
@@ -10,11 +10,11 @@
 
 
 ## Invert Binary Tree
-# 📌 Description
+## 📌 Description
 
 Inverts a binary tree by swapping the left and right child nodes recursively.
 
-# 🔧 Key Concepts
+## 🔧 Key Concepts
 
 - Binary Tree
 - Recursion
@@ -26,11 +26,11 @@ Displays the preorder traversal of the inverted tree.
 
 
 ## Kaprekar Constant (6174)
-# 📌 Description
+## 📌 Description
 
 Calculates the number of steps required to reach Kaprekar's constant (6174) for any 4‑digit number.
 
-# 🔧 Key Concepts
+## 🔧 Key Concepts
 
 - String formatting
 - Sorting
@@ -42,11 +42,11 @@ Output: 3
 
 
 ## Maximum Rectangle in Binary Matrix
-# 📌 Description
+#3 📌 Description
 
 Finds the largest rectangle consisting of 1s in a binary matrix.
 
-# 🔧 Key Concepts
+## 🔧 Key Concepts
 
 - Stack
 - Histogram technique
@@ -58,11 +58,11 @@ Prints the maximum rectangle area.
 
 
 ## Minimum Path Sum in Binary Tree
-# 📌 Description
+## 📌 Description
 
 Calculates the minimum root‑to‑leaf path sum in a binary tree.
 
-# 🔧 Key Concepts
+## 🔧 Key Concepts
 
 - Recursive tree traversal
 - User‑driven tree creation
@@ -73,11 +73,11 @@ Displays the minimum path sum.
 
 
 ## Subtree Check
-# 📌 Description
+## 📌 Description
 
 Checks whether one binary tree is a subtree of another binary tree.
 
-# 🔧 Key Concepts
+## 🔧 Key Concepts
 
 - Tree comparison
 - Recursive traversal
@@ -87,11 +87,11 @@ true / false
 
 
 ## Word Circle Problem
-# 📌 Description
+## 📌 Description
 
 Determines whether a list of words can form a circular chain such that the last character of one word matches the first character of the next.
 
-# 🔧 Key Concepts
+## 🔧 Key Concepts
 
 - Backtracking
 - Recursion
